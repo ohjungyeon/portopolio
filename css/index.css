@@ -533,7 +533,7 @@ body {
     overflow: hidden;
 
     transition: 5s;
-    color: rgb(16, 17, 16);
+    color: rgb(172, 179, 172);
     word-spacing: 5px;
   }
   .marquee div {

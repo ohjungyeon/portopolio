@@ -48,7 +48,8 @@ $(document).ready(function () {
     $("html, body").stop().animate({ scrollTop: move });
   });
 
-  let total = $(".panel li").length;
+  // let total = $(".panel li").length;
+  let total = 4;
   let i = 0;
   console.log(total);
 
@@ -79,50 +80,45 @@ $(document).ready(function () {
   // $(".close").click(function () {
   //   $(".modal").css({ display: "none" });
   // });
-
   $(document).ready(function () {
     // 페이지 로드시 팝업 overlay를 표시합니다.
     $(".popup-overlay").fadeIn();
 
     $(".popup-overlay, .close").click(function () {
       $(".popup, .popup-overlay").fadeOut();
+      $("body").removeClass("modal-open"); // 모달 닫을 때 클래스 제거
     });
-  });
 
-  $(".popup").click(function (event) {
-    event.stopPropagation();
-  });
+    $(".popup").click(function (event) {
+      event.stopPropagation();
+    }); /*못나오게 하기*/
 
-  $(".graphic1").click(function () {
-    $("#graphicPopup, .popup-overlay").fadeIn();
-  });
-  $(".graphic2").click(function () {
-    $("#graphicPopup2, .popup-overlay").fadeIn();
-    $(".popup-overlay").css("background-color", "rgba(0, 0, 0, 0.5)");
-  });
-  $(".graphic3").click(function () {
-    $("#graphicPopup3, .popup-overlay").fadeIn();
-    $(".popup-overlay").css("background-color", "rgba(0, 0, 0, 0.5)");
-  });
-  $(".graphic4").click(function () {
-    $("#graphicPopup4, .popup-overlay").fadeIn();
-    $(".popup-overlay").css("background-color", "rgba(0, 0, 0, 0.5)");
+    $(".graphic1").click(function () {
+      $("#graphicPopup, .popup-overlay").fadeIn();
+      $("body").addClass("modal-open");
+    });
+    $(".graphic2").click(function () {
+      $("#graphicPopup2, .popup-overlay").fadeIn();
+      $("body").addClass("modal-open");
+    });
+    $(".graphic3").click(function () {
+      $("#graphicPopup3, .popup-overlay").fadeIn();
+      $("body").addClass("modal-open");
+    });
+    $(".graphic4").click(function () {
+      $("#graphicPopup4, .popup-overlay").fadeIn();
+      $("body").addClass("modal-open");
+    });
+    $(".graphic5").click(function () {
+      $("#graphicPopup5, .popup-overlay").fadeIn();
+      $("body").addClass("modal-open");
+    });
   });
 });
 $(".popup-overlay").fadeIn();
 
 $(".popup-overlay, .close").click(function () {
   $(".popup, .popup-overlay").fadeOut();
-});
-
-$(".popup").click(function (event) {
-  event.stopPropagation();
-
-  $(".popup-overlay").fadeIn();
-
-  $(".popup-overlay, .close").click(function () {
-    $(".popup, .popup-overlay").fadeOut();
-  });
 });
 
 $(".popup").click(function (event) {

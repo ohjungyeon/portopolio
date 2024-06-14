@@ -19,6 +19,10 @@ body {
   font-weight: weight;
   font-style: normal;
 }
+body.modal-open {
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden; /* 스크롤 방지 */
+}
 @media (min-width: 75rem) {
   /* intro */
   #intro {
@@ -322,6 +326,7 @@ body {
   }
 
   .panel {
+    width: 100%;
     display: flex;
   }
 
@@ -330,16 +335,22 @@ body {
     width: 500px;
     height: 600px;
   }
-
   .ofix {
-    padding: 10px;
+    text-align: center;
     font-size: 20px;
-    justify-content: center;
     display: flex;
-    color: black;
+    width: 500px;
+    padding: 10px;
+    background-color: white;
+  }
+  .ofix ul {
+    margin-bottom: -15px;
+    padding: 10px;
   }
 
   .link {
+    text-align: center;
+    margin-top: -135px;
     display: flex;
   }
 
@@ -383,26 +394,55 @@ body {
   #graphic ul li {
     margin: 10px;
   }
+  .lageimg ul {
+    display: flex;
+  }
+
+  /*복사*/
+  .graphic1,
+  .graphic2 {
+    /* Common styles for graphic1 and graphic2 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    margin: 10px; /* Adjust margin as needed */
+  }
 
   .graphic1 {
-    width: 500px;
-    height: 600px;
-    background-color: #555;
+    background-image: url(../img/립밤.jpg);
   }
+
   .graphic2 {
-    width: 500px;
-    height: 200px;
-    background-color: #555;
+    background-image: url(../img/실리만.jpg);
   }
-  .graphic3 {
-    width: 500px;
-    height: 200px;
-    background-color: #e0d2d2;
-  }
+
+  .graphic3,
   .graphic4 {
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 500px;
-    height: 300px;
-    background-color: #351414;
+    height: 200px;
+    margin: 10px;
+  }
+
+  .graphic3 {
+    background-image: url(../img/반값.jpg);
+    /* Example background image */
+  }
+
+  .graphic4 {
+    background-image: url(../img/신규회원.jpg); /* Example background image */
+  }
+
+  /* Style for graphic5 */
+  .graphic5 {
+    background-image: url(../img/수분크림.jpg); /* Example background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    margin: 10px; /* Adjust margin as needed */
   }
 
   /* content */
@@ -471,7 +511,7 @@ body {
   }
   /* 팝업창 */
 
-  .popup-overay.on {
+  /* .popup-overay.on {
     position: fixed;
     z-index: 1;
     left: 0;
@@ -487,7 +527,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-  }
+  } */
   .popup-overlay {
     display: none;
     position: fixed;
@@ -505,13 +545,13 @@ body {
     z-index: 9999;
     left: 50%;
     top: 50%;
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    max-height: 80%;
     transform: translate(-50%, -50%);
     background-color: #ffffff;
     padding: 20px;
     border: 1px solid #888;
-    overflow: auto;
+    overflow-y: auto;
   }
 
   .close {
@@ -525,7 +565,16 @@ body {
   }
 
   .popup-content {
+    justify-content: center;
+    width: 100%;
     padding: 20px;
+  }
+
+  .popup-content img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
   }
   .marquee {
     font-size: 40px;
@@ -806,7 +855,7 @@ body {
 
   .border {
     position: relative;
-    width: 100%;
+    width: 120%;
     height: 80vh;
     top: 80px;
     border-radius: 50%;
@@ -856,14 +905,21 @@ body {
   }
 
   .ofix {
-    padding: 10px;
+    text-align: center;
     font-size: 20px;
-    justify-content: center;
     display: flex;
-    color: black;
+    width: 500px;
+    padding: 10px;
+    background-color: white;
+  }
+  .ofix ul {
+    margin-bottom: -15px;
+    padding: 10px;
   }
 
   .link {
+    text-align: center;
+    margin-top: -135px;
     display: flex;
   }
 
@@ -1022,20 +1078,19 @@ body {
     background-color: rgba(0, 0, 0, 0.5); /* 초기에는 투명한 배경 */
     z-index: 9998;
   }
-
   .popup {
     display: none;
     position: fixed;
     z-index: 9999;
     left: 50%;
     top: 50%;
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    max-height: 80%;
     transform: translate(-50%, -50%);
     background-color: #ffffff;
     padding: 20px;
     border: 1px solid #888;
-    overflow: auto;
+    overflow-y: auto;
   }
 
   .close {
@@ -1049,20 +1104,76 @@ body {
   }
 
   .popup-content {
+    justify-content: center;
+    width: 100%;
     padding: 20px;
   }
+
+  .popup-content img {
+    max-width: 100%; /* 이미지 최대 너비 설정 */
+    max-height: 100%; /* 이미지 최대 높이 설정 */
+    display: block; /* inline 요소를 block 요소로 변환하여 가로 정렬을 쉽게 만듭니다. */
+    margin: 0 auto; /* 가로 정렬 */
+  }
   .marquee {
-    font-size: 50px;
+    font-size: 40px;
     width: 100%;
     overflow: hidden;
 
     transition: 5s;
-    color: rgb(193, 197, 193);
+    color: rgb(172, 179, 172);
     word-spacing: 5px;
   }
   .marquee div {
     display: inline-block;
     padding-right: 100px;
+  }
+
+  /*복사*/
+  .graphic1,
+  .graphic2 {
+    /* Common styles for graphic1 and graphic2 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    margin: 10px; /* Adjust margin as needed */
+  }
+
+  .graphic1 {
+    background-image: url(../img/립밤.jpg);
+  }
+
+  .graphic2 {
+    background-image: url(../img/실리만.jpg);
+  }
+
+  .graphic3,
+  .graphic4 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 200px;
+    margin: 10px;
+  }
+
+  .graphic3 {
+    background-image: url(../img/반값.jpg);
+    /* Example background image */
+  }
+
+  .graphic4 {
+    background-image: url(../img/신규회원.jpg); /* Example background image */
+  }
+
+  /* Style for graphic5 */
+  .graphic5 {
+    background-image: url(../img/수분크림.jpg); /* Example background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    margin: 10px; /* Adjust margin as needed */
   }
 }
 
@@ -1389,17 +1500,23 @@ body {
   }
 
   .ofix {
-    padding: 10px;
+    text-align: center;
     font-size: 20px;
-    justify-content: center;
     display: flex;
-    color: black;
+    width: 500px;
+    padding: 10px;
+    background-color: white;
+  }
+  .ofix ul {
+    margin-bottom: -15px;
+    padding: 10px;
   }
 
   .link {
+    text-align: center;
+    margin-top: -135px;
     display: flex;
   }
-
   .link li a {
     padding: 10px;
     background-color: black;
@@ -1558,20 +1675,19 @@ body {
     background-color: rgba(0, 0, 0, 0.5); /* 초기에는 투명한 배경 */
     z-index: 9998;
   }
-
   .popup {
     display: none;
     position: fixed;
     z-index: 9999;
     left: 50%;
     top: 50%;
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    max-height: 80%;
     transform: translate(-50%, -50%);
     background-color: #ffffff;
     padding: 20px;
     border: 1px solid #888;
-    overflow: auto;
+    overflow-y: auto;
   }
 
   .close {
@@ -1585,18 +1701,75 @@ body {
   }
 
   .popup-content {
+    justify-content: center;
+    width: 100%;
     padding: 20px;
   }
+
+  .popup-content img {
+    max-width: 100%; /* 이미지 최대 너비 설정 */
+    max-height: 100%; /* 이미지 최대 높이 설정 */
+    display: block; /* inline 요소를 block 요소로 변환하여 가로 정렬을 쉽게 만듭니다. */
+    margin: 0 auto; /* 가로 정렬 */
+  }
   .marquee {
-    font-size: 50px;
+    font-size: 40px;
     width: 100%;
     overflow: hidden;
+
     transition: 5s;
-    color: rgb(193, 197, 193);
+    color: rgb(172, 179, 172);
     word-spacing: 5px;
   }
   .marquee div {
     display: inline-block;
     padding-right: 100px;
+  }
+
+  /*복사*/
+  .graphic1,
+  .graphic2 {
+    /* Common styles for graphic1 and graphic2 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    margin: 10px; /* Adjust margin as needed */
+  }
+
+  .graphic1 {
+    background-image: url(../img/립밤.jpg);
+  }
+
+  .graphic2 {
+    background-image: url(../img/실리만.jpg);
+  }
+
+  .graphic3,
+  .graphic4 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 200px;
+    margin: 10px;
+  }
+
+  .graphic3 {
+    background-image: url(../img/반값.jpg);
+    /* Example background image */
+  }
+
+  .graphic4 {
+    background-image: url(../img/신규회원.jpg); /* Example background image */
+  }
+
+  /* Style for graphic5 */
+  .graphic5 {
+    background-image: url(../img/수분크림.jpg); /* Example background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    margin: 10px; /* Adjust margin as needed */
   }
 }

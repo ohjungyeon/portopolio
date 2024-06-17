@@ -13,7 +13,6 @@ ul {
 }
 
 body {
-  overflow-x: hidden;
   font-family: "Noto Sans KR", sans-serif;
 
   font-optical-sizing: auto;
@@ -217,7 +216,8 @@ body.modal-open {
 
   #about h1 {
     width: 200px;
-    font-size: 40px;
+
+    font-size: 60px;
   }
 
   .bg {
@@ -233,7 +233,7 @@ body.modal-open {
   }
 
   #about > div h3 {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   #about ul {
@@ -295,7 +295,7 @@ body.modal-open {
 
   .border h4 {
     text-align: center;
-    font-size: 0px;
+    font-size: 40px;
     margin: 20px;
     color: black;
   }
@@ -384,11 +384,11 @@ body.modal-open {
   }
 
   #graphic h1 {
-    padding-left: 20px;
     letter-spacing: 5px;
     text-decoration: underline;
+    padding: 150px;
     color: black;
-    font-size: 40px;
+    font-size: 60px;
   }
 
   #graphic ul li {
@@ -401,11 +401,12 @@ body.modal-open {
   /*복사*/
   .graphic1,
   .graphic2 {
+    /* Common styles for graphic1 and graphic2 */
     background-repeat: no-repeat;
     background-size: cover;
-    width: 500px;
-    height: 400px;
-    margin: 10px;
+    width: 500px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    margin: 10px; /* Adjust margin as needed */
   }
 
   .graphic1 {
@@ -715,7 +716,7 @@ body.modal-open {
   }
 
   .porto h1 {
-    font-size: 100px;
+    font-size: 80px;
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
     text-align: center;
@@ -861,12 +862,12 @@ body.modal-open {
     background-color: white;
   }
 
-  /* .border h4 {
+  .border h4 {
     text-align: center;
     font-size: 40px;
     margin: 20px;
     color: black;
-  } */
+  }
 
   .over {
     position: absolute;
@@ -1186,8 +1187,7 @@ body.modal-open {
   }
 
   .text {
-    box-sizing: border-box;
-    padding: 150px;
+    text-align: center;
   }
 
   .text h1 {
@@ -1210,8 +1210,8 @@ body.modal-open {
     width: 100%;
     background-color: black;
     padding-top: 10px;
-    justify-content: right;
-    font-size: 13px;
+
+    font-size: 10px;
     display: flex;
     position: fixed;
   }
@@ -1360,7 +1360,6 @@ body.modal-open {
   /* about */
   #about {
     box-sizing: content-box;
-
     position: relative;
     width: 100%;
     height: 80vh;
@@ -1371,8 +1370,9 @@ body.modal-open {
   }
 
   #about h1 {
+    margin-top: 100px;
     width: 100%;
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .bg {
@@ -1437,12 +1437,12 @@ body.modal-open {
   }
 
   .total h1 {
-    padding-top: 50px;
+    padding-top: 30px;
     letter-spacing: 5px;
     text-decoration: underline;
     box-sizing: border-box;
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
     color: white;
   }
 
@@ -1455,35 +1455,34 @@ body.modal-open {
     background-color: white;
   }
 
-  /* .border h4 {
+  .border h4 {
     text-align: center;
-    font-size: 25px;
-    margin-top: 20px;
-    margin-bottom: 5px;
+    font-size: 30px;
+    margin: 20px;
     color: black;
-  } */
+  }
 
   .over {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
   .fa-circle-chevron-left {
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: -40px;
-    transform: translateY(-30%, -50%);
+    transform: translateY(-40%, -50%);
     font-size: 30px;
     color: black;
   }
 
   .fa-circle-chevron-right {
     position: absolute;
-    top: 30%;
+    top: 40%;
     right: -40px;
-    transform: translateY(-30%, -50%);
+    transform: translateY(-40%, -50%);
     font-size: 30px;
     color: black;
   }
@@ -1494,12 +1493,14 @@ body.modal-open {
   }
 
   .content {
-    margin-top: 50px;
     overflow: hidden;
-    width: 500px;
-    height: 800px;
+    width: 300px;
+    height: 300px;
   }
-
+  .content img {
+    width: 300px;
+    height: 300px;
+  }
   .ofix {
     text-align: center;
     font-size: 20px;
@@ -1519,6 +1520,7 @@ body.modal-open {
     display: flex;
   }
   .link li a {
+    display: none;
     padding: 10px;
     background-color: black;
     color: white;
@@ -1530,10 +1532,12 @@ body.modal-open {
   }
 
   .link {
+    display: none;
     justify-content: center;
   }
 
   .back {
+    display: none;
     position: absolute;
     top: 45%;
     background-color: white;
@@ -1548,13 +1552,14 @@ body.modal-open {
   }
 
   #graphic h1 {
+    text-align: center;
     display: flex;
     align-items: center;
     letter-spacing: 5px;
     text-decoration: underline;
     padding: 100px;
     color: black;
-    font-size: 30px;
+    font-size: 50px;
   }
 
   #graphic ul li {
@@ -1584,7 +1589,6 @@ body.modal-open {
 
   /* content */
   #content {
-    margin-bottom: -50px;
     color: rgb(3, 3, 3);
   }
   #content li {
@@ -1594,15 +1598,16 @@ body.modal-open {
     padding: 150px;
     letter-spacing: 5px;
     text-decoration: underline;
-    font-size: 30px;
+    font-size: 40px;
   }
   #content h3 {
     text-align: center;
     font-size: 20px;
   }
   #content li img {
+    display: none;
     text-align: center;
-    padding-left: 265px;
+
     width: 50px;
     height: 50px;
   }
@@ -1709,17 +1714,17 @@ body.modal-open {
   }
 
   .popup-content img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 100%; /* 이미지 최대 너비 설정 */
+    max-height: 100%; /* 이미지 최대 높이 설정 */
     display: block; /* inline 요소를 block 요소로 변환하여 가로 정렬을 쉽게 만듭니다. */
     margin: 0 auto; /* 가로 정렬 */
   }
   .marquee {
-    margin-top: 20px;
-    font-size: 30px;
+    font-size: 40px;
     width: 100%;
     overflow: hidden;
-    transition: 5s;
+    display: none;
+    transition: 10s;
     color: rgb(172, 179, 172);
     word-spacing: 5px;
   }
@@ -1731,11 +1736,12 @@ body.modal-open {
   /*복사*/
   .graphic1,
   .graphic2 {
+    /* Common styles for graphic1 and graphic2 */
     background-repeat: no-repeat;
     background-size: cover;
-    width: 500px;
-    height: 400px;
-    margin: 10px;
+    width: 500px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    margin: 10px; /* Adjust margin as needed */
   }
 
   .graphic1 {
@@ -1757,18 +1763,20 @@ body.modal-open {
 
   .graphic3 {
     background-image: url(../img/반값.jpg);
+    /* Example background image */
   }
 
   .graphic4 {
-    background-image: url(../img/신규회원.jpg);
+    background-image: url(../img/신규회원.jpg); /* Example background image */
   }
 
+  /* Style for graphic5 */
   .graphic5 {
-    background-image: url(../img/수분크림.jpg);
+    background-image: url(../img/수분크림.jpg); /* Example background image */
     background-repeat: no-repeat;
     background-size: cover;
-    width: 500px;
-    height: 400px;
-    margin: 10px;
+    width: 500px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    margin: 10px; /* Adjust margin as needed */
   }
 }

@@ -126,7 +126,7 @@ $(".popup").click(function (event) {
 });
 $(function () {
   $(".marquee").marquee({
-    duration: 15000,
+    duration: 5000,
   });
 });
 // $(".fa-circle-chevron-right").on("click", function () {

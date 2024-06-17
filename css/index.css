@@ -13,6 +13,7 @@ ul {
 }
 
 body {
+  overflow-x: hidden;
   font-family: "Noto Sans KR", sans-serif;
 
   font-optical-sizing: auto;
@@ -216,8 +217,7 @@ body.modal-open {
 
   #about h1 {
     width: 200px;
-
-    font-size: 60px;
+    font-size: 40px;
   }
 
   .bg {
@@ -233,7 +233,7 @@ body.modal-open {
   }
 
   #about > div h3 {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   #about ul {
@@ -1594,7 +1594,7 @@ body.modal-open {
     padding: 150px;
     letter-spacing: 5px;
     text-decoration: underline;
-    font-size: 60px;
+    font-size: 30px;
   }
   #content h3 {
     text-align: center;

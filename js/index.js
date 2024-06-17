@@ -2,12 +2,8 @@ $(document).ready(function () {
   $(window).on("scroll", function () {
     let sc = $(window).scrollTop();
 
-    // 이미지 크기 조정 조건
-    let panelWidth = $(window).width() <= 350 ? 350 : 1200;
-    let panelHeight = $(window).width() <= 350 ? "250%" : "180%";
-
     if (sc >= 900 && sc <= 1350) {
-      $(".bg").stop().animate({ width: panelWidth, height: panelHeight });
+      $(".bg").stop().animate({ width: "200%", height: "250%" });
     }
 
     let baseline = -200;
@@ -48,12 +44,14 @@ $(document).ready(function () {
     $("#navi li").removeClass("on");
     $("#navi li").eq(navi).addClass("on");
 
-    let move = $("#container").eq(navi).offset();
+    let move = $("#conatainer").eq(navi).offset();
     $("html, body").stop().animate({ scrollTop: move });
   });
 
-  let total = $(".panel li").length;
+  // let total = $(".panel li").length;
+  let total = 4;
   let i = 0;
+  console.log(total);
 
   $(".fa-circle-chevron-right").on("click", function () {
     if (i == total - 1) {
@@ -61,8 +59,8 @@ $(document).ready(function () {
     } else {
       i++;
     }
-    let newRight = -panelWidth * i; // 이미지의 너비에 따라 조정
-    $(".panel").animate({ "margin-left": newRight + "px" });
+    let newright = -500 * i;
+    $(".panel").animate({ "margin-left": newright + "px" });
   });
 
   $(".fa-circle-chevron-left").on("click", function () {
@@ -71,21 +69,29 @@ $(document).ready(function () {
     } else {
       i--;
     }
-    let newLeft = panelWidth * i; // 이미지의 너비에 따라 조정
+    let newLeft = 500 * i; // 이미지의 너비에 따라 조정
     $(".panel").animate({ "margin-left": -newLeft + "px" });
   });
 
+  // $(".graphic1").click(function () {
+  //   $(this).find(".modal").css("display", "block");
+  // });
+
+  // $(".close").click(function () {
+  //   $(".modal").css({ display: "none" });
+  // });
   $(document).ready(function () {
+    // 페이지 로드시 팝업 overlay를 표시합니다.
     $(".popup-overlay").fadeIn();
 
     $(".popup-overlay, .close").click(function () {
       $(".popup, .popup-overlay").fadeOut();
-      $("body").removeClass("modal-open");
+      $("body").removeClass("modal-open"); // 모달 닫을 때 클래스 제거
     });
 
     $(".popup").click(function (event) {
       event.stopPropagation();
-    });
+    }); /*못나오게 하기*/
 
     $(".graphic1").click(function () {
       $("#graphicPopup, .popup-overlay").fadeIn();
@@ -108,10 +114,29 @@ $(document).ready(function () {
       $("body").addClass("modal-open");
     });
   });
+});
+$(".popup-overlay").fadeIn();
 
-  $(function () {
-    $(".marquee").marquee({
-      duration: 15000,
-    });
+$(".popup-overlay, .close").click(function () {
+  $(".popup, .popup-overlay").fadeOut();
+});
+
+$(".popup").click(function (event) {
+  event.stopPropagation();
+});
+$(function () {
+  $(".marquee").marquee({
+    duration: 15000,
   });
 });
+// $(".fa-circle-chevron-right").on("click", function () {
+//   let i = parseInt($(".panel").css("margin-left")) || 0;
+//   let next = i - 550;
+//   let max = -550 * ($(".panel li").length - 1);
+//   if (next < max) {
+//     i = 0;
+//   } else {
+//     i = next;
+//   }
+//   $(".panel").animate({ "margin-left": i + "px" });
+// });

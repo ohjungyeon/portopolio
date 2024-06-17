@@ -295,7 +295,7 @@ body.modal-open {
 
   .border h4 {
     text-align: center;
-    font-size: 40px;
+    font-size: 0px;
     margin: 20px;
     color: black;
   }
@@ -384,11 +384,11 @@ body.modal-open {
   }
 
   #graphic h1 {
+    padding-left: 20px;
     letter-spacing: 5px;
     text-decoration: underline;
-    padding: 150px;
     color: black;
-    font-size: 60px;
+    font-size: 40px;
   }
 
   #graphic ul li {
@@ -401,12 +401,11 @@ body.modal-open {
   /*복사*/
   .graphic1,
   .graphic2 {
-    /* Common styles for graphic1 and graphic2 */
     background-repeat: no-repeat;
     background-size: cover;
-    width: 500px; /* Adjust width as needed */
-    height: 400px; /* Adjust height as needed */
-    margin: 10px; /* Adjust margin as needed */
+    width: 500px;
+    height: 400px;
+    margin: 10px;
   }
 
   .graphic1 {
@@ -862,12 +861,12 @@ body.modal-open {
     background-color: white;
   }
 
-  .border h4 {
+  /* .border h4 {
     text-align: center;
     font-size: 40px;
     margin: 20px;
     color: black;
-  }
+  } */
 
   .over {
     position: absolute;
@@ -1438,11 +1437,12 @@ body.modal-open {
   }
 
   .total h1 {
+    padding-top: 50px;
     letter-spacing: 5px;
     text-decoration: underline;
     box-sizing: border-box;
     text-align: center;
-    font-size: 60px;
+    font-size: 30px;
     color: white;
   }
 
@@ -1455,13 +1455,13 @@ body.modal-open {
     background-color: white;
   }
 
-  .border h4 {
+  /* .border h4 {
     text-align: center;
     font-size: 25px;
     margin-top: 20px;
     margin-bottom: 5px;
     color: black;
-  }
+  } */
 
   .over {
     position: absolute;
@@ -1494,6 +1494,7 @@ body.modal-open {
   }
 
   .content {
+    margin-top: 50px;
     overflow: hidden;
     width: 500px;
     height: 800px;
@@ -1553,7 +1554,7 @@ body.modal-open {
     text-decoration: underline;
     padding: 100px;
     color: black;
-    font-size: 60px;
+    font-size: 30px;
   }
 
   #graphic ul li {
@@ -1583,6 +1584,7 @@ body.modal-open {
 
   /* content */
   #content {
+    margin-bottom: -50px;
     color: rgb(3, 3, 3);
   }
   #content li {
@@ -1707,16 +1709,16 @@ body.modal-open {
   }
 
   .popup-content img {
-    max-width: 100%; /* 이미지 최대 너비 설정 */
-    max-height: 100%; /* 이미지 최대 높이 설정 */
+    max-width: 100%;
+    max-height: 100%;
     display: block; /* inline 요소를 block 요소로 변환하여 가로 정렬을 쉽게 만듭니다. */
     margin: 0 auto; /* 가로 정렬 */
   }
   .marquee {
-    font-size: 40px;
+    margin-top: 20px;
+    font-size: 30px;
     width: 100%;
     overflow: hidden;
-
     transition: 5s;
     color: rgb(172, 179, 172);
     word-spacing: 5px;

@@ -1647,6 +1647,7 @@ body.modal-open {
   }
 
   #graphic h1 {
+    padding-left: 10px;
     text-align: center;
     display: flex;
     align-items: center;

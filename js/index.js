@@ -16,7 +16,7 @@ $(document).ready(function () {
     if (sc >= con1 && sc < con2) {
       $("#navi li").removeClass("on");
       $("#navi li").eq(0).addClass("on");
-    } else if (sc >= con2 && sc < con3) {
+    } else if (sc >= con2) {
       $("#navi li").removeClass("on");
       $("#navi li").eq(1).addClass("on");
       $("#wrap > div").removeClass("on");
@@ -140,3 +140,15 @@ $(function () {
 //   }
 //   $(".panel").animate({ "margin-left": i + "px" });
 // });
+document.addEventListener("DOMContentLoaded", function () {
+  let marquee = document.querySelector(".marquee");
+  let rolling = document.querySelector(".rolling");
+
+  if (rolling) {
+    let clone = rolling.cloneNode(true);
+    marquee.appendChild(clone);
+
+    rolling.id = "rolling1";
+    clone.id = "rolling2";
+  }
+});

@@ -16,7 +16,7 @@ $(document).ready(function () {
     if (sc >= con1 && sc < con2) {
       $("#navi li").removeClass("on");
       $("#navi li").eq(0).addClass("on");
-    } else if (sc >= con2) {
+    } else if (sc >= con2 && sc < con3) {
       $("#navi li").removeClass("on");
       $("#navi li").eq(1).addClass("on");
       $("#wrap > div").removeClass("on");

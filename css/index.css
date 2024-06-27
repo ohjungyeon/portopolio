@@ -15,7 +15,7 @@ ul {
 body {
   font-family: "Noto Sans KR", sans-serif;
 
-  font-optical-sizing: auto;
+  /* font-optical-sizing: auto; */
   /* font-weight: weight; */
   font-style: normal;
 }
@@ -34,10 +34,10 @@ body.modal-open {
     color: white;
   }
 
-  /* .text {
+  .text {
     box-sizing: border-box;
     padding: 150px;
-  } */
+  }
 
   .text h1 {
     letter-spacing: 5px;
@@ -856,9 +856,9 @@ body.modal-open {
     display: flex;
   }
 
-  #about p {
+  /* #about p {
     font-size: 20px;
-  }
+  } */
 
   .oto li {
     font-size: 20px;
@@ -1493,10 +1493,10 @@ body.modal-open {
   #about > div p {
     display: flex;
   }
-  #about p {
+  /* #about p {
     text-emphasis: center;
     font-size: 18px;
-  }
+  } */
 
   .oto li {
     text-align: center;
@@ -1519,7 +1519,7 @@ body.modal-open {
     transition: 0.5s;
   } */
   .text {
-    margin-left: ;
+    margin-left: 10px;
     z-index: 5;
   }
 

@@ -1559,7 +1559,7 @@ body.modal-open {
 
   .over {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -1648,12 +1648,12 @@ body.modal-open {
 
   #graphic h1 {
     padding-left: 10px;
-    text-align: center;
+    justify-content: center;
     display: flex;
     align-items: center;
     letter-spacing: 5px;
     text-decoration: underline;
-    margin-top: 100px;
+    margin-top: 150px;
     padding-bottom: 50px;
     color: black;
     font-size: 50px;

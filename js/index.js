@@ -48,29 +48,70 @@ $(document).ready(function () {
     $("html, body").stop().animate({ scrollTop: move });
   });
 
-  // let total = $(".panel li").length;
-  let total = 4;
-  let i = 0;
-  console.log(total);
+  // // let total = $(".panel li").length;
+  // let total = 4;
+  // let i = 0;
+  // console.log(total);
 
-  $(".fa-circle-chevron-right").on("click", function () {
-    if (i == total - 1) {
-      i = 0;
-    } else {
-      i++;
-    }
-    let newright = -500 * i;
-    $(".panel").animate({ "margin-left": newright + "px" });
-  });
+  // $(".fa-circle-chevron-right").on("click", function () {
+  //   if (i == total - 1) {
+  //     i = 0;
+  //   } else {
+  //     i++;
+  //   }
+  //   let newright = -500 * i;
+  //   $(".panel").animate({ "margin-left": newright + "px" });
+  // });
 
-  $(".fa-circle-chevron-left").on("click", function () {
-    if (i == 0) {
-      i = total - 1;
-    } else {
-      i--;
-    }
-    let newLeft = 500 * i; // 이미지의 너비에 따라 조정
-    $(".panel").animate({ "margin-left": -newLeft + "px" });
+  // $(".fa-circle-chevron-left").on("click", function () {
+  //   if (i == 0) {
+  //     i = total - 1;
+  //   } else {
+  //     i--;
+  //   }
+  //   let newLeft = 500 * i; // 이미지의 너비에 따라 조정
+  //   $(".panel").animate({ "margin-left": -newLeft + "px" });
+  // });
+  $(document).ready(function () {
+    let i = 0;
+    let total = $(".panel li").length;
+
+    $(".fa-circle-chevron-right").on("click", function () {
+      let panelItemWidth = $(".panel li").outerWidth(); // 패널 내 아이템 하나의 너비
+      let currentMarginLeft = parseFloat($(".panel").css("margin-left")); // 현재 margin-left 값 (px)
+
+      if (i == total - 1) {
+        i = 0;
+      } else {
+        i++;
+      }
+      let newright = -panelItemWidth * i;
+      $(".panel")
+        .stop()
+        .animate({ "margin-left": newright + "px" });
+    });
+
+    $(".fa-circle-chevron-left").on("click", function () {
+      let panelItemWidth = $(".panel li").outerWidth(); // 패널 내 아이템 하나의 너비
+      let currentMarginLeft = parseFloat($(".panel").css("margin-left")); // 현재 margin-left 값 (px)
+
+      if (i == 0) {
+        i = total - 1;
+      } else {
+        i--;
+      }
+      let newLeft = panelItemWidth * i;
+      $(".panel")
+        .stop()
+        .animate({ "margin-left": -newLeft + "px" });
+    });
+
+    $(window).on("resize", function () {
+      // 창 크기가 변경될 때마다 패널 아이템의 너비를 다시 계산하여 설정합니다.
+      let panelItemWidth = $(".panel li").outerWidth();
+      let newLeft = panelItemWidth * i;
+      $(".panel").css("margin-left", -newLeft + "px");
+    });
   });
 
   // $(".graphic1").click(function () {

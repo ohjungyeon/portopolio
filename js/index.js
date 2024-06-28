@@ -71,91 +71,83 @@ $(document).ready(function () {
   //   }
   //   let newLeft = 500 * i; // 이미지의 너비에 따라 조정
   //   $(".panel").animate({ "margin-left": -newLeft + "px" });
-  // });
-  $(document).ready(function () {
-    let i = 0;
-    let total = $(".panel li").length;
+  // });$(document).ready(function () {
+  let total = 4;
+  let i = 0;
+  let panelItemWidth = $(".panel li").width(); // 초기 패널 아이템의 너비
 
-    $(".fa-circle-chevron-right").on("click", function () {
-      let panelItemWidth = $(".panel li").outerWidth(); // 패널 내 아이템 하나의 너비
-      let currentMarginLeft = parseFloat($(".panel").css("margin-left")); // 현재 margin-left 값 (px)
+  $(window).on("resize", function () {
+    // 창 크기가 변경될 때마다 패널 아이템의 너비를 다시 계산하여 설정합니다.
+    panelItemWidth = $(".panel li").width();
 
-      if (i == total - 1) {
-        i = 0;
-      } else {
-        i++;
-      }
-      let newright = -panelItemWidth * i;
-      $(".panel")
-        .stop()
-        .animate({ "margin-left": newright + "px" });
-    });
-
-    $(".fa-circle-chevron-left").on("click", function () {
-      let panelItemWidth = $(".panel li").outerWidth(); // 패널 내 아이템 하나의 너비
-      let currentMarginLeft = parseFloat($(".panel").css("margin-left")); // 현재 margin-left 값 (px)
-
-      if (i == 0) {
-        i = total - 1;
-      } else {
-        i--;
-      }
-      let newLeft = panelItemWidth * i;
-      $(".panel")
-        .stop()
-        .animate({ "margin-left": -newLeft + "px" });
-    });
-
-    $(window).on("resize", function () {
-      // 창 크기가 변경될 때마다 패널 아이템의 너비를 다시 계산하여 설정합니다.
-      let panelItemWidth = $(".panel li").outerWidth();
-      let newLeft = panelItemWidth * i;
-      $(".panel").css("margin-left", -newLeft + "px");
-    });
+    // 현재 보이는 아이템 유지를 위해 margin-left 재설정
+    let newLeft = -panelItemWidth * i;
+    $(".panel").css("margin-left", newLeft + "px");
   });
 
-  // $(".graphic1").click(function () {
-  //   $(this).find(".modal").css("display", "block");
-  // });
+  $(".fa-circle-chevron-right").on("click", function () {
+    if (i === total - 1) {
+      i = 0;
+    } else {
+      i++;
+    }
+    let newRight = -panelItemWidth * i;
+    $(".panel").animate({ "margin-left": newRight + "px" });
+  });
 
-  // $(".close").click(function () {
-  //   $(".modal").css({ display: "none" });
-  // });
-  $(document).ready(function () {
-    // 페이지 로드시 팝업 overlay를 표시합니다.
-    $(".popup-overlay").fadeIn();
-
-    $(".popup-overlay, .close").click(function () {
-      $(".popup, .popup-overlay").fadeOut();
-      $("body").removeClass("modal-open"); // 모달 닫을 때 클래스 제거
-    });
-
-    $(".popup").click(function (event) {
-      event.stopPropagation();
-    }); /*못나오게 하기*/
-
-    $(".graphic1").click(function () {
-      $("#graphicPopup, .popup-overlay").fadeIn();
-      $("body").addClass("modal-open");
-    });
-    $(".graphic2").click(function () {
-      $("#graphicPopup2, .popup-overlay").fadeIn();
-      $("body").addClass("modal-open");
-    });
-    $(".graphic3").click(function () {
-      $("#graphicPopup3, .popup-overlay").fadeIn();
-      $("body").addClass("modal-open");
-    });
-    $(".graphic4").click(function () {
-      $("#graphicPopup4, .popup-overlay").fadeIn();
-      $("body").addClass("modal-open");
-    });
-    $(".graphic5").click(function () {
-      $("#graphicPopup5, .popup-overlay").fadeIn();
-      $("body").addClass("modal-open");
-    });
+  $(".fa-circle-chevron-left").on("click", function () {
+    if (i === 0) {
+      i = total - 1;
+    } else {
+      i--;
+    }
+    let newLeft = panelItemWidth * i;
+    $(".panel").animate({ "margin-left": -newLeft + "px" });
   });
 });
+
+// $(".graphic1").click(function () {
+//   $(this).find(".modal").css("display", "block");
+// });
+
+// $(".close").click(function () {
+//   $(".modal").css({ display: "none" });
+// });
+$(document).ready(function () {
+  // 페이지 로드시 팝업 overlay를 표시합니다.
+  $(".popup-overlay").fadeIn();
+
+  $(".popup-overlay, .close").click(function () {
+    $(".popup, .popup-overlay").fadeOut();
+    $("body").removeClass("modal-open"); // 모달 닫을 때 클래스 제거
+  });
+
+  $(".popup").click(function (event) {
+    event.stopPropagation();
+  }); /*못나오게 하기*/
+
+  $(".graphic1").click(function () {
+    $("#graphicPopup, .popup-overlay").fadeIn();
+    $("body").addClass("modal-open");
+  });
+  $(".graphic2").click(function () {
+    $("#graphicPopup2, .popup-overlay").fadeIn();
+    $("body").addClass("modal-open");
+  });
+  $(".graphic3").click(function () {
+    $("#graphicPopup3, .popup-overlay").fadeIn();
+    $("body").addClass("modal-open");
+  });
+  $(".graphic4").click(function () {
+    $("#graphicPopup4, .popup-overlay").fadeIn();
+    $("body").addClass("modal-open");
+  });
+  $(".graphic5").click(function () {
+    $("#graphicPopup5, .popup-overlay").fadeIn();
+    $("body").addClass("modal-open");
+  });
+});
+
 $(".popup-overlay").fadeIn();
 
 $(".popup-overlay, .close").click(function () {

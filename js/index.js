@@ -2,9 +2,9 @@ $(document).ready(function () {
   $(window).on("scroll", function () {
     let sc = $(window).scrollTop();
 
-    if (sc >= 900 && sc <= 1350) {
-      $(".bg").stop().animate({ width: "200%", height: "250%" });
-    }
+    // if (sc >= 900 && sc <= 1350) {
+    //   $(".bg").stop().animate({ width: "200%", height: "250%" });
+    // }
 
     let baseline = -200;
     let con1 = $("#intro").offset().top + baseline;
@@ -22,6 +22,7 @@ $(document).ready(function () {
       $("#wrap > div").removeClass("on");
       $("#wrap #about").addClass("on");
       initializeProgressBars();
+      $(".bg").stop().animate({ width: "200%", height: "250%" });
     } else if (sc >= con3 && sc < con4) {
       $("#navi li").removeClass("on");
       $("#navi li").eq(2).addClass("on");

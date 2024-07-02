@@ -21,6 +21,7 @@ $(document).ready(function () {
       $("#navi li").eq(1).addClass("on");
       $("#wrap > div").removeClass("on");
       $("#wrap #about").addClass("on");
+      initializeProgressBars();
     } else if (sc >= con3 && sc < con4) {
       $("#navi li").removeClass("on");
       $("#navi li").eq(2).addClass("on");
@@ -185,3 +186,20 @@ document.addEventListener("DOMContentLoaded", function () {
     clone.id = "rolling2";
   }
 });
+function initializeProgressBars() {
+  const progressBars = document.querySelectorAll(".progress-bar");
+
+  progressBars.forEach((bar) => {
+    const percentage = bar.getAttribute("data-percentage");
+    const circle = bar.querySelector(".circle");
+    const circleSvg = bar.querySelector(".circle-svg");
+
+    const gradientId = circleSvg.querySelector("defs linearGradient").id;
+    circle.style.stroke = `url(#${gradientId})`;
+
+    const offset = 283 - (283 * percentage) / 100;
+    setTimeout(() => {
+      circle.style.strokeDashoffset = offset;
+    }, 100); // Delay to ensure the transition works
+  });
+}

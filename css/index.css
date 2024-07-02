@@ -1571,7 +1571,7 @@ body.modal-open {
     box-sizing: content-box;
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 110vh;
     background-color: rgb(15, 14, 14);
     display: flex;
     color: black;

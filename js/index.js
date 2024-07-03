@@ -148,6 +148,10 @@ $(document).ready(function () {
     $("#graphicPopup5, .popup-overlay").fadeIn();
     $("body").addClass("modal-open");
   });
+  $(".graphic6").click(function () {
+    $("#graphicPopup6, .popup-overlay").fadeIn();
+    $("body").addClass("modal-open");
+  });
 });
 
 $(".popup-overlay").fadeIn();
@@ -156,9 +160,9 @@ $(".popup-overlay, .close").click(function () {
   $(".popup, .popup-overlay").fadeOut();
 });
 
-$(".popup").click(function (event) {
-  event.stopPropagation();
-});
+// $(".popup").click(function (event) {
+//   event.stopPropagation();
+// });
 $(function () {
   $(".marquee").marquee({
     duration: 5000,

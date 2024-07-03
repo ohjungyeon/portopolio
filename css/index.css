@@ -208,15 +208,13 @@ body.modal-open {
     height: 100vh;
     background-color: rgb(15, 14, 14);
     display: flex;
-    z-index: 99;
+    z-index: 999 !important; /* 높은 z-index 값을 설정하여 다른 요소들 위에 위치 */
     color: black;
-    height: 100vh;
     overflow: hidden;
   }
 
   #about h1 {
     width: 200px;
-
     font-size: 60px;
   }
 
@@ -234,36 +232,40 @@ body.modal-open {
 
   .circle-svg {
     width: 100px;
-
     height: 100px;
     transform: rotate(-90deg);
     margin-bottom: 10px;
+    position: relative;
+    z-index: -554;
   }
 
   .circle,
   .circle-bg {
     fill: none;
     stroke-width: 6;
-  }
-
-  .circle-bg {
-    z-index: -8;
-    stroke: #e6e6e6;
+    z-index: -555;
+    stroke: #e9e2e2;
   }
 
   .circle {
-    stroke: url(#grad1); /* This will be dynamically updated by JavaScript */
+    stroke: url(#grad1);
     stroke-dasharray: 283;
     stroke-dashoffset: 283;
     transition: stroke-dashoffset 1s;
   }
+
   .grap {
     margin-top: 50px;
   }
   .percentage,
   .label {
-    font-family: Arial, sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
+
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
     color: #333;
+    font-size: 0.8rem;
   }
   .circle-svg {
     width: 100px;
@@ -277,9 +279,6 @@ body.modal-open {
     font-weight: bold;
   }
 
-  .label {
-    font-size: 14px;
-  }
   #about > div h3 {
     font-size: 30px;
   }
@@ -485,29 +484,36 @@ body.modal-open {
     background-repeat: no-repeat;
     background-size: cover;
     width: 500px;
-    height: 200px;
+    height: 500px;
     margin: 10px;
   }
 
   .graphic3 {
-    background-image: url(../img/반값.jpg);
+    background-image: url(../img/24시간특가.png);
     /* Example background image */
   }
 
   .graphic4 {
-    background-image: url(../img/신규회원.jpg); /* Example background image */
+    background-image: url(../img/rig.png); /* Example background image */
   }
 
   /* Style for graphic5 */
   .graphic5 {
-    background-image: url(../img/수분크림.jpg); /* Example background image */
+    background-image: url(../img/달빛축제.png); /* Example background image */
     background-repeat: no-repeat;
     background-size: cover;
     width: 500px; /* Adjust width as needed */
-    height: 400px; /* Adjust height as needed */
+    height: 500px; /* Adjust height as needed */
     margin: 10px; /* Adjust margin as needed */
   }
-
+  .graphic6 {
+    background-image: url(../img/시네마.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    margin: 10px;
+  }
   /* content */
   #content {
     color: rgb(3, 3, 3);
@@ -957,7 +963,13 @@ body.modal-open {
   }
   .percentage,
   .label {
-    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    font-family: "Noto Sans KR", sans-serif;
+    text-align: center;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
     color: #333;
   }
   .circle-svg {
@@ -973,10 +985,6 @@ body.modal-open {
     font-weight: bold;
   }
 
-  .label {
-    text-align: center;
-    font-size: 14px;
-  }
   .progress-bar {
     text-align: cneter;
     padding: 10px;
@@ -1147,7 +1155,22 @@ body.modal-open {
     height: 300px;
     background-color: #351414;
   }
-
+  .graphic5 {
+    background-image: url(../img/달빛축제.png); /* Example background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px; /* Adjust width as needed */
+    height: 500px; /* Adjust height as needed */
+    margin: 10px; /* Adjust margin as needed */
+  }
+  .graphic6 {
+    background-image: url(../img/시네마.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    margin: 10px;
+  }
   /* content */
   #content {
     color: rgb(3, 3, 3);
@@ -1313,27 +1336,27 @@ body.modal-open {
 
   .graphic3,
   .graphic4 {
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 500px;
-    height: 200px;
+    height: 500px;
     margin: 10px;
   }
 
   .graphic3 {
-    background-image: url(../img/반값.jpg);
+    background-image: url(../img/24시간특가.png);
   }
 
   .graphic4 {
-    background-image: url(../img/신규회원.jpg);
+    background-image: url(../img/rig.png);
   }
-
   .graphic5 {
-    background-image: url(../img/수분크림.jpg);
+    background-image: url(../img/달빛축제.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 500px;
-    height: 400px;
+    height: 500px;
     margin: 10px;
   }
 
@@ -1571,7 +1594,7 @@ body.modal-open {
     box-sizing: content-box;
     position: relative;
     width: 100%;
-    height: 130vh;
+    height: 130givh;
     background-color: rgb(15, 14, 14);
     display: flex;
     color: black;
@@ -1630,7 +1653,13 @@ body.modal-open {
   }
   .percentage,
   .label {
-    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    font-family: "Noto Sans KR", sans-serif;
+    text-align: center;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
     color: #333;
   }
   .circle-svg {
@@ -2029,31 +2058,42 @@ body.modal-open {
 
   .graphic3,
   .graphic4 {
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 500px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     margin: 10px;
   }
 
   .graphic3 {
-    background-image: url(../img/반값.jpg);
+    background-image: url(../img/24시간특가.png);
     /* Example background image */
   }
 
   .graphic4 {
-    background-image: url(../img/신규회원.jpg);
+    background-image: url(../img/rig.png);
   }
 
   .graphic5 {
-    background-image: url(../img/수분크림.jpg);
+    background-image: url(../img/달빛축제.png); /* Example background image */
     background-repeat: no-repeat;
     background-size: cover;
-    width: 500px;
-    height: 400px;
+    width: 300px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    margin: 10px; /* Adjust margin as 
+    needed */
+    background-position: center;
+  }
+  .graphic6 {
+    background-position: center;
+    background-image: url(../img/시네마.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
     margin: 10px;
   }
-
   .marquee {
     overflow-x: hidden;
     display: flex;

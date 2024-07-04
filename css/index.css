@@ -467,16 +467,16 @@ body.modal-open {
     background-repeat: no-repeat;
     background-size: cover;
     width: 500px; /* Adjust width as needed */
-    height: 400px; /* Adjust height as needed */
+    height: 500px; /* Adjust height as needed */
     margin: 10px; /* Adjust margin as needed */
   }
 
   .graphic1 {
-    background-image: url(../img/립밤.jpg);
+    background-image: url(../img/24시간특가.png);
   }
 
   .graphic2 {
-    background-image: url(../img/실리만.jpg);
+    background-image: url(../img/rig.png);
   }
 
   .graphic3,
@@ -489,30 +489,40 @@ body.modal-open {
   }
 
   .graphic3 {
-    background-image: url(../img/24시간특가.png);
-    /* Example background image */
-  }
-
-  .graphic4 {
-    background-image: url(../img/rig.png); /* Example background image */
-  }
-
-  /* Style for graphic5 */
-  .graphic5 {
     background-image: url(../img/달빛축제.png); /* Example background image */
     background-repeat: no-repeat;
     background-size: cover;
     width: 500px; /* Adjust width as needed */
     height: 500px; /* Adjust height as needed */
     margin: 10px; /* Adjust margin as needed */
+    /* Example background image */
   }
-  .graphic6 {
+
+  .graphic4 {
     background-image: url(../img/시네마.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 500px;
     height: 500px;
     margin: 10px;
+  }
+
+  /* Style for graphic5 */
+  .graphic5 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    margin: 10px;
+    background-image: url(../img/립밤.jpg);
+  }
+  .graphic6 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    margin: 10px;
+    background-image: url(../img/실리만.jpg);
   }
   /* content */
   #content {
@@ -1135,42 +1145,6 @@ body.modal-open {
     margin: 10px;
   }
 
-  .graphic1 {
-    width: 500px;
-    height: 600px;
-    background-color: #555;
-  }
-  .graphic2 {
-    width: 500px;
-    height: 200px;
-    background-color: #555;
-  }
-  .graphic3 {
-    width: 500px;
-    height: 200px;
-    background-color: #e0d2d2;
-  }
-  .graphic4 {
-    width: 500px;
-    height: 300px;
-    background-color: #351414;
-  }
-  .graphic5 {
-    background-image: url(../img/달빛축제.png); /* Example background image */
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 500px; /* Adjust width as needed */
-    height: 500px; /* Adjust height as needed */
-    margin: 10px; /* Adjust margin as needed */
-  }
-  .graphic6 {
-    background-image: url(../img/시네마.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 500px;
-    height: 500px;
-    margin: 10px;
-  }
   /* content */
   #content {
     color: rgb(3, 3, 3);
@@ -1322,21 +1296,31 @@ body.modal-open {
     background-repeat: no-repeat;
     background-size: cover;
     width: 500px; /* Adjust width as needed */
-    height: 400px; /* Adjust height as needed */
+    height: 5cqb; /* Adjust height as needed */
+    margin: 10px; /* Adjust margin as needed */
+  }
+
+  /*복사*/
+  .graphic1,
+  .graphic2 {
+    /* Common styles for graphic1 and graphic2 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px; /* Adjust width as needed */
+    height: 500px; /* Adjust height as needed */
     margin: 10px; /* Adjust margin as needed */
   }
 
   .graphic1 {
-    background-image: url(../img/립밤.jpg);
+    background-image: url(../img/24시간특가.png);
   }
 
   .graphic2 {
-    background-image: url(../img/실리만.jpg);
+    background-image: url(../img/rig.png);
   }
 
   .graphic3,
   .graphic4 {
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 500px;
@@ -1345,14 +1329,17 @@ body.modal-open {
   }
 
   .graphic3 {
-    background-image: url(../img/24시간특가.png);
+    background-image: url(../img/달빛축제.png); /* Example background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px; /* Adjust width as needed */
+    height: 500px; /* Adjust height as needed */
+    margin: 10px; /* Adjust margin as needed */
+    /* Example background image */
   }
 
   .graphic4 {
-    background-image: url(../img/rig.png);
-  }
-  .graphic5 {
-    background-image: url(../img/달빛축제.png);
+    background-image: url(../img/시네마.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 500px;
@@ -1360,6 +1347,23 @@ body.modal-open {
     margin: 10px;
   }
 
+  /* Style for graphic5 */
+  .graphic5 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    margin: 10px;
+    background-image: url(../img/립밤.jpg);
+  }
+  .graphic6 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    margin: 10px;
+    background-image: url(../img/실리만.jpg);
+  }
   .marquee {
     overflow-x: hidden;
     display: flex;
@@ -1594,7 +1598,7 @@ body.modal-open {
     box-sizing: content-box;
     position: relative;
     width: 100%;
-    height: 130givh;
+    height: 120vh;
     background-color: rgb(15, 14, 14);
     display: flex;
     color: black;
@@ -1862,13 +1866,13 @@ body.modal-open {
     margin-top: 150px;
     padding-bottom: 50px;
     color: black;
-    font-size: 50px;
+    font-size: 45px;
   }
 
   #graphic ul li {
     margin: 10px;
   }
-
+  /* 
   .graphic1 {
     width: 500px;
     height: 600px;
@@ -1888,7 +1892,7 @@ body.modal-open {
     width: 500px;
     height: 300px;
     background-color: #351414;
-  }
+  } */
 
   /* content */
   #content {
@@ -2048,44 +2052,39 @@ body.modal-open {
     margin: 10px; /* Adjust margin as needed */
   }
 
-  .graphic1 {
-    background-image: url(../img/립밤.jpg);
-  }
-
+  /*복사*/
+  .graphic1,
   .graphic2 {
-    background-image: url(../img/실리만.jpg);
-  }
-
-  .graphic3,
-  .graphic4 {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
-    margin: 10px;
-  }
-
-  .graphic3 {
-    background-image: url(../img/24시간특가.png);
-    /* Example background image */
-  }
-
-  .graphic4 {
-    background-image: url(../img/rig.png);
-  }
-
-  .graphic5 {
-    background-image: url(../img/달빛축제.png); /* Example background image */
+    /* Common styles for graphic1 and graphic2 */
     background-repeat: no-repeat;
     background-size: cover;
     width: 300px; /* Adjust width as needed */
     height: 300px; /* Adjust height as needed */
-    margin: 10px; /* Adjust margin as 
-    needed */
-    background-position: center;
+    margin: 10px; /* Adjust margin as needed */
   }
-  .graphic6 {
+
+  .graphic1 {
+    background-position: center;
+    background-image: url(../img/24시간특가.png);
+  }
+
+  .graphic2 {
+    background-position: center;
+    background-image: url(../img/rig.png);
+  }
+
+  .graphic3 {
+    background-image: url(../img/달빛축제.png); /* Example background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    margin: 10px; /* Adjust margin as needed */
+    /* Example background image */
+  }
+
+  .graphic4 {
     background-position: center;
     background-image: url(../img/시네마.png);
     background-repeat: no-repeat;
@@ -2093,6 +2092,24 @@ body.modal-open {
     width: 300px;
     height: 300px;
     margin: 10px;
+  }
+
+  /* Style for graphic5 */
+  .graphic5 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    background-image: url(../img/립밤.jpg);
+  }
+  .graphic6 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    background-image: url(../img/실리만.jpg);
   }
   .marquee {
     overflow-x: hidden;
